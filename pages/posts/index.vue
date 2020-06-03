@@ -2,7 +2,9 @@
   <div class="container">
     <div>
        <div v-for="post in posts">
-        <h1 class="subtitle"><a :href="`posts/${post.slug}`">{{ post.title }}</a></h1>
+        <h1 class="subtitle">
+          <nuxt-link :to="{name: 'posts-slug', params: {slug: post.slug}}">{{ post.title }}</nuxt-link>
+        </h1>
         <br>
         <p>{{ post.content }}</p>
       </div>

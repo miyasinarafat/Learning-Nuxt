@@ -1,9 +1,9 @@
 <template>
   <div class="links">
-    <a class="button--green" href="/">Home</a>
-    <a class="button--grey" href="/about">About</a>
-    <a class="button--grey" href="/posts">Blog</a>
-    <a class="button--grey" href="/contact">Contact</a>
+    <nuxt-link :to="{ name: 'index' }" class="button--green">Home</nuxt-link>
+    <nuxt-link to="/about" class="button--grey">About</nuxt-link>
+    <nuxt-link to="/posts" class="button--grey">Blog</nuxt-link>
+    <nuxt-link to="/contact" class="button--grey">Contact</nuxt-link>
   </div>
 </template>
 
