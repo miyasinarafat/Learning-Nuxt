@@ -20,6 +20,17 @@
         slug: this.$route.params.slug,
       }
     },
+    head() {
+      return {
+        title: 'Posts page',
+        meta: [
+          { name: 'twitter:title',  content: 'Posts page'},
+          { name: 'twitter:description', content:  'Nuxt + Vue School = 🍕'},
+          { name: 'twitter:image', content: 'https://i.imgur.com/UYP2umJ.png'},
+          { name: 'twitter:card', content: 'summary_large_image'}
+        ]
+      };
+    },
     computed: {
       post() {
         return this.posts.find(post => post.slug == this.slug)

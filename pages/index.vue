@@ -9,13 +9,8 @@
         My beautiful Nuxt.js project
       </h2>
       <div class="links">
-        <a
-          href="/"
-          class="button--green"
-        >
-          Home
-        </a>
-        <nuxt-link to="/post" class="button--grey">Post</nuxt-link>
+        <nuxt-link to="/" class="button--green">Home</nuxt-link>
+        <nuxt-link to="/posts" class="button--grey">Posts</nuxt-link>
       </div>
     </div>
   </div>
@@ -27,6 +22,17 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  head() {
+    return {
+      title: 'Home Page  🍕',
+      meta: [
+        { name: 'twitter:title', content: 'Nuxt Fundamentals by Vue School'},
+        { name: 'twitter:description', content: 'Nuxt + Vue School = 🍕'},
+        { name: 'twitter:image', content: 'https://i.imgur.com/UYP2umJ.png'},
+        { name: 'twitter:card', content: 'summary_large_image'}
+      ]
+    }
   }
 }
 </script>
